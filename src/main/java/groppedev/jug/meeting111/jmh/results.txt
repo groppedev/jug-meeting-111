@@ -1,0 +1,807 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory
+
+# Run progress: 0,00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory-jmh-worker-1] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42a4609d: startup date [Sat Mar 16 14:02:50 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory-jmh-worker-1] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory-jmh-worker-1] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+60958,683 ops/ms
+# Warmup Iteration   2: 72404,221 ops/ms
+# Warmup Iteration   3: 75642,857 ops/ms
+# Warmup Iteration   4: 75044,243 ops/ms
+# Warmup Iteration   5: 74206,820 ops/ms
+Iteration   1: 75088,022 ops/ms
+                 ·gc.alloc.rate:                   2663,175 MB/sec
+                 ·gc.alloc.rate.norm:              56,000 B/op
+                 ·gc.churn.PS_Eden_Space:          2677,085 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     56,293 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,081 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,002 B/op
+                 ·gc.count:                        13,000 counts
+                 ·gc.time:                         11,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   2: 75071,638 ops/ms
+                 ·gc.alloc.rate:                   2712,645 MB/sec
+                 ·gc.alloc.rate.norm:              56,000 B/op
+                 ·gc.churn.PS_Eden_Space:          2656,395 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     54,839 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,119 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,002 B/op
+                 ·gc.count:                        13,000 counts
+                 ·gc.time:                         11,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   3: 74307,064 ops/ms
+                 ·gc.alloc.rate:                   2711,056 MB/sec
+                 ·gc.alloc.rate.norm:              56,000 B/op
+                 ·gc.churn.PS_Eden_Space:          2661,011 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     54,966 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,039 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,001 B/op
+                 ·gc.count:                        13,000 counts
+                 ·gc.time:                         12,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   4: 73409,502 ops/ms
+                 ·gc.alloc.rate:                   2633,523 MB/sec
+                 ·gc.alloc.rate.norm:              56,000 B/op
+                 ·gc.churn.PS_Eden_Space:          2541,088 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     54,034 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,121 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,003 B/op
+                 ·gc.count:                        12,000 counts
+                 ·gc.time:                         12,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory-jmh-worker-2] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@42a4609d: startup date [Sat Mar 16 14:02:50 CET 2019]; root of context hierarchy
+74842,109 ops/ms
+                 ·gc.alloc.rate:                   1629,751 MB/sec
+                 ·gc.alloc.rate.norm:              56,001 B/op
+                 ·gc.churn.PS_Eden_Space:          1624,069 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     55,806 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,073 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,003 B/op
+                 ·gc.count:                        13,000 counts
+                 ·gc.time:                         13,000 ms
+                 ·stack:                           <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory":
+  74543,667 ±(99.9%) 2727,206 ops/ms [Average]
+  (min, avg, max) = (73409,502, 74543,667, 75088,022), stdev = 708,247
+  CI (99.9%): [71816,461, 77270,873] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.alloc.rate":
+  2470,030 ±(99.9%) 1813,343 MB/sec [Average]
+  (min, avg, max) = (1629,751, 2470,030, 2712,645), stdev = 470,919
+  CI (99.9%): [656,687, 4283,373] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.alloc.rate.norm":
+  56,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (56,000, 56,000, 56,001), stdev = 0,001
+  CI (99.9%): [55,999, 56,001] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.churn.PS_Eden_Space":
+  2431,930 ±(99.9%) 1751,428 MB/sec [Average]
+  (min, avg, max) = (1624,069, 2431,930, 2677,085), stdev = 454,840
+  CI (99.9%): [680,502, 4183,358] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.churn.PS_Eden_Space.norm":
+  55,188 ±(99.9%) 3,392 B/op [Average]
+  (min, avg, max) = (54,034, 55,188, 56,293), stdev = 0,881
+  CI (99.9%): [51,796, 58,579] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.churn.PS_Survivor_Space":
+  0,086 ±(99.9%) 0,133 MB/sec [Average]
+  (min, avg, max) = (0,039, 0,086, 0,121), stdev = 0,034
+  CI (99.9%): [? 0, 0,219] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.churn.PS_Survivor_Space.norm":
+  0,002 ±(99.9%) 0,003 B/op [Average]
+  (min, avg, max) = (0,001, 0,002, 0,003), stdev = 0,001
+  CI (99.9%): [? 0, 0,005] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.count":
+  64,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (12,000, 12,800, 13,000), stdev = 0,447
+  CI (99.9%): [64,000, 64,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·gc.time":
+  59,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (11,000, 11,800, 13,000), stdev = 0,837
+  CI (99.9%): [59,000, 59,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 73,2%         RUNNABLE
+ 21,1%         TIMED_WAITING
+  5,7%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 64,5%  88,1% groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeFactory
+  6,6%   9,0% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_prototypeFactory_jmhTest.prototypeFactory_thrpt_jmhStub
+  1,8%   2,5% groppedev.jug.meeting111.jmh.Emailers.newEmailer
+  0,1%   0,1% java.util.concurrent.locks.AbstractQueuedSynchronizer.doReleaseShared
+  0,1%   0,1% java.lang.Thread.currentThread
+  0,1%   0,1% sun.misc.Unsafe.getIntVolatile
+  0,1%   0,1% sun.reflect.Reflection.getClassAccessFlags
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 21,1% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  5,7% 100,0% sun.misc.Unsafe.park
+
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring
+
+# Run progress: 16,67% complete, ETA 00:02:05
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring-jmh-worker-3] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d1e1d95: startup date [Sat Mar 16 14:03:15 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+77,166 ops/ms
+# Warmup Iteration   2: 527,323 ops/ms
+# Warmup Iteration   3: 573,135 ops/ms
+# Warmup Iteration   4: 572,119 ops/ms
+# Warmup Iteration   5: 579,979 ops/ms
+Iteration   1: 551,898 ops/ms
+                 ·gc.alloc.rate:                   763,731 MB/sec
+                 ·gc.alloc.rate.norm:              2168,005 B/op
+                 ·gc.churn.PS_Eden_Space:          738,319 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     2095,867 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,020 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,057 B/op
+                 ·gc.count:                        9,000 counts
+                 ·gc.time:                         10,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   2: 572,019 ops/ms
+                 ·gc.alloc.rate:               783,502 MB/sec
+                 ·gc.alloc.rate.norm:          2168,005 B/op
+                 ·gc.churn.PS_Eden_Space:      764,242 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm: 2114,711 B/op
+                 ·gc.count:                    8,000 counts
+                 ·gc.time:                     7,000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   3: 567,021 ops/ms
+                 ·gc.alloc.rate:                   784,284 MB/sec
+                 ·gc.alloc.rate.norm:              2168,005 B/op
+                 ·gc.churn.PS_Eden_Space:          748,579 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     2069,305 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,020 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,055 B/op
+                 ·gc.count:                        11,000 counts
+                 ·gc.time:                         10,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   4: 546,361 ops/ms
+                 ·gc.alloc.rate:               751,367 MB/sec
+                 ·gc.alloc.rate.norm:          2168,005 B/op
+                 ·gc.churn.PS_Eden_Space:      713,808 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm: 2059,633 B/op
+                 ·gc.count:                    11,000 counts
+                 ·gc.time:                     10,000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring-jmh-worker-3] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@4d1e1d95: startup date [Sat Mar 16 14:03:15 CET 2019]; root of context hierarchy
+576,798 ops/ms
+                 ·gc.alloc.rate:               481,790 MB/sec
+                 ·gc.alloc.rate.norm:          2168,093 B/op
+                 ·gc.churn.PS_Eden_Space:      468,179 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm: 2106,840 B/op
+                 ·gc.count:                    11,000 counts
+                 ·gc.time:                     9,000 ms
+                 ·stack:                       <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring":
+  562,819 ±(99.9%) 50,495 ops/ms [Average]
+  (min, avg, max) = (546,361, 562,819, 576,798), stdev = 13,113
+  CI (99.9%): [512,324, 613,314] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.alloc.rate":
+  712,935 ±(99.9%) 500,419 MB/sec [Average]
+  (min, avg, max) = (481,790, 712,935, 784,284), stdev = 129,957
+  CI (99.9%): [212,516, 1213,354] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.alloc.rate.norm":
+  2168,022 ±(99.9%) 0,153 B/op [Average]
+  (min, avg, max) = (2168,005, 2168,022, 2168,093), stdev = 0,040
+  CI (99.9%): [2167,870, 2168,175] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Eden_Space":
+  686,625 ±(99.9%) 475,491 MB/sec [Average]
+  (min, avg, max) = (468,179, 686,625, 764,242), stdev = 123,483
+  CI (99.9%): [211,135, 1162,116] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Eden_Space.norm":
+  2089,271 ±(99.9%) 91,861 B/op [Average]
+  (min, avg, max) = (2059,633, 2089,271, 2114,711), stdev = 23,856
+  CI (99.9%): [1997,410, 2181,132] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Survivor_Space":
+  0,008 ±(99.9%) 0,042 MB/sec [Average]
+  (min, avg, max) = (? 0, 0,008, 0,020), stdev = 0,011
+  CI (99.9%): [? 0, 0,050] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Survivor_Space.norm":
+  0,022 ±(99.9%) 0,118 B/op [Average]
+  (min, avg, max) = (? 0, 0,022, 0,057), stdev = 0,031
+  CI (99.9%): [? 0, 0,140] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.count":
+  50,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (8,000, 10,000, 11,000), stdev = 1,414
+  CI (99.9%): [50,000, 50,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·gc.time":
+  46,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (7,000, 9,200, 10,000), stdev = 1,304
+  CI (99.9%): [46,000, 46,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeProviderSpring:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 72,6%         RUNNABLE
+ 20,5%         TIMED_WAITING
+  5,5%         WAITING
+  1,4%         BLOCKED
+
+....[Thread state: RUNNABLE]........................................................................
+ 41,7%  57,4% java.lang.reflect.Executable.sharedGetParameterAnnotations
+ 13,2%  18,2% org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.registerDependentBean
+  3,1%   4,3% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+  2,8%   3,9% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance
+  2,8%   3,8% java.lang.Class.getEnclosingMethod0
+  2,2%   3,0% org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor
+  2,0%   2,7% java.lang.Class.getDeclaringClass0
+  1,2%   1,7% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean
+  0,8%   1,1% org.springframework.beans.factory.support.AbstractBeanFactory.registerCustomEditors
+  0,3%   0,5% org.springframework.beans.factory.support.AbstractBeanFactory.getBean
+  2,5%   3,4% <other>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 20,5% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  5,5% 100,0% sun.misc.Unsafe.park
+
+....[Thread state: BLOCKED].........................................................................
+  1,1%  76,0% org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.registerDependentBean
+  0,2%  16,0% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+  0,1%   8,0% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance
+
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring
+
+# Run progress: 33,33% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring-jmh-worker-3] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4233bb94: startup date [Sat Mar 16 14:03:40 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+104,726 ops/ms
+# Warmup Iteration   2: 528,849 ops/ms
+# Warmup Iteration   3: 589,240 ops/ms
+# Warmup Iteration   4: 591,924 ops/ms
+# Warmup Iteration   5: 585,384 ops/ms
+Iteration   1: 548,853 ops/ms
+                 ·gc.alloc.rate:               756,646 MB/sec
+                 ·gc.alloc.rate.norm:          2168,005 B/op
+                 ·gc.churn.PS_Eden_Space:      717,238 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm: 2055,091 B/op
+                 ·gc.count:                    8,000 counts
+                 ·gc.time:                     7,000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   2: 573,600 ops/ms
+                 ·gc.alloc.rate:                   793,683 MB/sec
+                 ·gc.alloc.rate.norm:              2168,004 B/op
+                 ·gc.churn.PS_Eden_Space:          706,859 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     1930,838 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,040 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,109 B/op
+                 ·gc.count:                        10,000 counts
+                 ·gc.time:                         9,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   3: 360,116 ops/ms
+                 ·gc.alloc.rate:                   497,614 MB/sec
+                 ·gc.alloc.rate.norm:              2168,007 B/op
+                 ·gc.churn.PS_Eden_Space:          444,292 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     1935,695 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,020 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,085 B/op
+                 ·gc.count:                        5,000 counts
+                 ·gc.time:                         8,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   4: 569,492 ops/ms
+                 ·gc.alloc.rate:                   796,082 MB/sec
+                 ·gc.alloc.rate.norm:              2168,004 B/op
+                 ·gc.churn.PS_Eden_Space:          740,038 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     2015,378 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,019 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,053 B/op
+                 ·gc.count:                        11,000 counts
+                 ·gc.time:                         10,000 ms
+                 ·stack:                           <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring-jmh-worker-1] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@4233bb94: startup date [Sat Mar 16 14:03:40 CET 2019]; root of context hierarchy
+594,191 ops/ms
+                 ·gc.alloc.rate:                   496,127 MB/sec
+                 ·gc.alloc.rate.norm:              2168,091 B/op
+                 ·gc.churn.PS_Eden_Space:          494,575 MB/sec
+                 ·gc.churn.PS_Eden_Space.norm:     2161,307 B/op
+                 ·gc.churn.PS_Survivor_Space:      0,012 MB/sec
+                 ·gc.churn.PS_Survivor_Space.norm: 0,053 B/op
+                 ·gc.count:                        10,000 counts
+                 ·gc.time:                         9,000 ms
+                 ·stack:                           <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring":
+  529,250 ±(99.9%) 369,313 ops/ms [Average]
+  (min, avg, max) = (360,116, 529,250, 594,191), stdev = 95,909
+  CI (99.9%): [159,938, 898,563] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.alloc.rate":
+  668,030 ±(99.9%) 604,658 MB/sec [Average]
+  (min, avg, max) = (496,127, 668,030, 796,082), stdev = 157,028
+  CI (99.9%): [63,372, 1272,689] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.alloc.rate.norm":
+  2168,022 ±(99.9%) 0,148 B/op [Average]
+  (min, avg, max) = (2168,004, 2168,022, 2168,091), stdev = 0,038
+  CI (99.9%): [2167,874, 2168,170] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.churn.PS_Eden_Space":
+  620,600 ±(99.9%) 537,754 MB/sec [Average]
+  (min, avg, max) = (444,292, 620,600, 740,038), stdev = 139,653
+  CI (99.9%): [82,847, 1158,354] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.churn.PS_Eden_Space.norm":
+  2019,662 ±(99.9%) 366,707 B/op [Average]
+  (min, avg, max) = (1930,838, 2019,662, 2161,307), stdev = 95,233
+  CI (99.9%): [1652,955, 2386,368] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.churn.PS_Survivor_Space":
+  0,018 ±(99.9%) 0,056 MB/sec [Average]
+  (min, avg, max) = (? 0, 0,018, 0,040), stdev = 0,014
+  CI (99.9%): [? 0, 0,074] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.churn.PS_Survivor_Space.norm":
+  0,060 ±(99.9%) 0,157 B/op [Average]
+  (min, avg, max) = (? 0, 0,060, 0,109), stdev = 0,041
+  CI (99.9%): [? 0, 0,217] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.count":
+  44,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (5,000, 8,800, 11,000), stdev = 2,387
+  CI (99.9%): [44,000, 44,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·gc.time":
+  43,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (7,000, 8,600, 10,000), stdev = 1,140
+  CI (99.9%): [43,000, 43,000] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.prototypeSpring:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 69,4%         RUNNABLE
+ 21,9%         TIMED_WAITING
+  6,1%         WAITING
+  2,6%         BLOCKED
+
+....[Thread state: RUNNABLE]........................................................................
+ 39,5%  56,9% java.lang.reflect.Executable.sharedGetParameterAnnotations
+ 11,5%  16,6% org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.registerDependentBean
+  2,8%   4,0% java.lang.Class.getEnclosingMethod0
+  2,8%   4,0% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance
+  2,6%   3,7% org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor
+  1,8%   2,7% java.lang.Class.getDeclaringClass0
+  1,8%   2,6% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+  1,5%   2,1% org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString
+  1,2%   1,7% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean
+  0,8%   1,2% org.springframework.beans.support.ResourceEditorRegistrar.registerCustomEditors
+  3,2%   4,5% <other>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 21,9% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  6,1% 100,0% sun.misc.Unsafe.park
+
+....[Thread state: BLOCKED].........................................................................
+  1,8%  69,8% org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.registerDependentBean
+  0,6%  23,3% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance
+  0,1%   4,7% org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean
+  0,1%   2,3% org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor
+
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory
+
+# Run progress: 50,00% complete, ETA 00:01:15
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory-jmh-worker-2] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@48e4e75b: startup date [Sat Mar 16 14:04:05 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory-jmh-worker-2] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory-jmh-worker-2] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+303641,891 ops/ms
+# Warmup Iteration   2: 299121,520 ops/ms
+# Warmup Iteration   3: 374349,862 ops/ms
+# Warmup Iteration   4: 381457,128 ops/ms
+# Warmup Iteration   5: 371546,448 ops/ms
+Iteration   1: 372618,465 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?? B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   2: 367911,648 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?? B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   3: 364366,572 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?? B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   4: 372857,356 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?? B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory-jmh-worker-5] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@48e4e75b: startup date [Sat Mar 16 14:04:05 CET 2019]; root of context hierarchy
+369198,415 ops/ms
+                 ·gc.alloc.rate:      0,021 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?? B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory":
+  369390,491 ±(99.9%) 13600,816 ops/ms [Average]
+  (min, avg, max) = (364366,572, 369390,491, 372857,356), stdev = 3532,089
+  CI (99.9%): [355789,676, 382991,307] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory:·gc.alloc.rate":
+  0,005 ±(99.9%) 0,033 MB/sec [Average]
+  (min, avg, max) = (0,002, 0,005, 0,021), stdev = 0,009
+  CI (99.9%): [? 0, 0,039] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory:·gc.alloc.rate.norm":
+  ? 10?? B/op
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory:·gc.count":
+  ? 0 counts
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75,4%         RUNNABLE
+ 19,4%         TIMED_WAITING
+  5,2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 49,8%  66,1% groppedev.jug.meeting111.jmh.SpringBenchmark.singletonFactory
+ 25,4%  33,6% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_singletonFactory_jmhTest.singletonFactory_thrpt_jmhStub
+  0,2%   0,2% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_singletonFactory_jmhTest.singletonFactory_Throughput
+  0,1%   0,1% org.openjdk.jmh.runner.InfraControl.preTearDown
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 19,4% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  5,2% 100,0% sun.misc.Unsafe.park
+
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring
+
+# Run progress: 66,67% complete, ETA 00:00:50
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring-jmh-worker-3] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7cc5772: startup date [Sat Mar 16 14:04:30 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring-jmh-worker-3] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+4318,729 ops/ms
+# Warmup Iteration   2: 5119,802 ops/ms
+# Warmup Iteration   3: 4875,184 ops/ms
+# Warmup Iteration   4: 5173,880 ops/ms
+# Warmup Iteration   5: 5256,333 ops/ms
+Iteration   1: 5183,527 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: 0,001 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   2: 4805,841 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: 0,001 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   3: 4761,470 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: 0,001 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   4: 4838,364 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: 0,001 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring-jmh-worker-4] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@7cc5772: startup date [Sat Mar 16 14:04:30 CET 2019]; root of context hierarchy
+5336,020 ops/ms
+                 ·gc.alloc.rate:      0,022 MB/sec
+                 ·gc.alloc.rate.norm: 0,011 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring":
+  4985,045 ±(99.9%) 993,350 ops/ms [Average]
+  (min, avg, max) = (4761,470, 4985,045, 5336,020), stdev = 257,970
+  CI (99.9%): [3991,695, 5978,395] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring:·gc.alloc.rate":
+  0,006 ±(99.9%) 0,034 MB/sec [Average]
+  (min, avg, max) = (0,002, 0,006, 0,022), stdev = 0,009
+  CI (99.9%): [? 0, 0,040] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring:·gc.alloc.rate.norm":
+  0,003 ±(99.9%) 0,017 B/op [Average]
+  (min, avg, max) = (0,001, 0,003, 0,011), stdev = 0,005
+  CI (99.9%): [? 0, 0,020] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring:·gc.count":
+  ? 0 counts
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 46,4%         RUNNABLE
+ 37,0%         BLOCKED
+ 13,3%         TIMED_WAITING
+  3,3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 44,6%  96,2% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+  1,5%   3,3% org.springframework.beans.factory.support.AbstractBeanFactory.getBean
+  0,1%   0,2% java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.accessCheck
+  0,0%   0,1% groppedev.jug.meeting111.jmh.SpringBenchmark.singletonProviderSpring
+  0,0%   0,1% java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  0,0%   0,1% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_singletonProviderSpring_jmhTest.singletonProviderSpring_thrpt_jmhStub
+  0,0%   0,1% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_singletonProviderSpring_jmhTest.singletonProviderSpring_Throughput
+
+....[Thread state: BLOCKED].........................................................................
+ 37,0% 100,0% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 13,3% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  3,3% 100,0% sun.misc.Unsafe.park
+
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 5 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring
+
+# Run progress: 83,33% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring-jmh-worker-1] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@65285f4c: startup date [Sat Mar 16 14:04:54 CET 2019]; root of context hierarchy
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring-jmh-worker-1] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf.xml]
+[groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring-jmh-worker-1] INFO org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Skipped XML bean definition file due to specified profiles [PRODUCTION] not matching: class path resource [conf.xml]
+6753,126 ops/ms
+# Warmup Iteration   2: 5994,792 ops/ms
+# Warmup Iteration   3: 5811,786 ops/ms
+# Warmup Iteration   4: 5905,688 ops/ms
+# Warmup Iteration   5: 6274,237 ops/ms
+Iteration   1: 6171,926 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?³ B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   2: 5992,909 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?³ B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   3: 5897,178 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?³ B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   4: 6341,724 ops/ms
+                 ·gc.alloc.rate:      0,002 MB/sec
+                 ·gc.alloc.rate.norm: ? 10?³ B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+Iteration   5: [groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring-jmh-worker-2] INFO org.springframework.context.support.ClassPathXmlApplicationContext - Closing org.springframework.context.support.ClassPathXmlApplicationContext@65285f4c: startup date [Sat Mar 16 14:04:54 CET 2019]; root of context hierarchy
+6139,902 ops/ms
+                 ·gc.alloc.rate:      0,021 MB/sec
+                 ·gc.alloc.rate.norm: 0,009 B/op
+                 ·gc.count:           ? 0 counts
+                 ·stack:              <delayed till summary>
+
+
+
+Result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring":
+  6108,728 ±(99.9%) 659,743 ops/ms [Average]
+  (min, avg, max) = (5897,178, 6108,728, 6341,724), stdev = 171,333
+  CI (99.9%): [5448,985, 6768,470] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring:·gc.alloc.rate":
+  0,006 ±(99.9%) 0,034 MB/sec [Average]
+  (min, avg, max) = (0,002, 0,006, 0,021), stdev = 0,009
+  CI (99.9%): [? 0, 0,040] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring:·gc.alloc.rate.norm":
+  0,002 ±(99.9%) 0,015 B/op [Average]
+  (min, avg, max) = (? 10?³, 0,002, 0,009), stdev = 0,004
+  CI (99.9%): [? 0, 0,017] (assumes normal distribution)
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring:·gc.count":
+  ? 0 counts
+
+Secondary result "groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 41,6%         BLOCKED
+ 41,4%         RUNNABLE
+ 13,4%         TIMED_WAITING
+  3,6%         WAITING
+
+....[Thread state: BLOCKED].........................................................................
+ 41,6% 100,0% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+
+....[Thread state: RUNNABLE]........................................................................
+ 40,7%  98,3% org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory
+  0,5%   1,2% org.springframework.beans.factory.support.AbstractBeanFactory.getBean
+  0,1%   0,2% groppedev.jug.meeting111.jmh.generated.SpringBenchmark_singletonSpring_jmhTest.singletonSpring_thrpt_jmhStub
+  0,0%   0,1% groppedev.jug.meeting111.jmh.SpringBenchmark.singletonSpring
+  0,0%   0,1% java.lang.Thread.currentThread
+  0,0%   0,1% java.util.concurrent.locks.AbstractQueuedSynchronizer.enq
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 13,4% 100,0% java.lang.Thread.sleep
+
+....[Thread state: WAITING].........................................................................
+  3,6% 100,0% sun.misc.Unsafe.park
+
+
+
+# Run complete. Total time: 00:02:28
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                                  Mode  Cnt       Score       Error   Units
+SpringBenchmark.prototypeFactory                                          thrpt    5   74543,667 ±  2727,206  ops/ms
+SpringBenchmark.prototypeFactory:·gc.alloc.rate                           thrpt    5    2470,030 ±  1813,343  MB/sec
+SpringBenchmark.prototypeFactory:·gc.alloc.rate.norm                      thrpt    5      56,000 ±     0,001    B/op
+SpringBenchmark.prototypeFactory:·gc.churn.PS_Eden_Space                  thrpt    5    2431,930 ±  1751,428  MB/sec
+SpringBenchmark.prototypeFactory:·gc.churn.PS_Eden_Space.norm             thrpt    5      55,188 ±     3,392    B/op
+SpringBenchmark.prototypeFactory:·gc.churn.PS_Survivor_Space              thrpt    5       0,086 ±     0,133  MB/sec
+SpringBenchmark.prototypeFactory:·gc.churn.PS_Survivor_Space.norm         thrpt    5       0,002 ±     0,003    B/op
+SpringBenchmark.prototypeFactory:·gc.count                                thrpt    5      64,000              counts
+SpringBenchmark.prototypeFactory:·gc.time                                 thrpt    5      59,000                  ms
+SpringBenchmark.prototypeFactory:·stack                                   thrpt              NaN                 ---
+SpringBenchmark.prototypeProviderSpring                                   thrpt    5     562,819 ±    50,495  ops/ms
+SpringBenchmark.prototypeProviderSpring:·gc.alloc.rate                    thrpt    5     712,935 ±   500,419  MB/sec
+SpringBenchmark.prototypeProviderSpring:·gc.alloc.rate.norm               thrpt    5    2168,022 ±     0,153    B/op
+SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Eden_Space           thrpt    5     686,625 ±   475,491  MB/sec
+SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Eden_Space.norm      thrpt    5    2089,271 ±    91,861    B/op
+SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Survivor_Space       thrpt    5       0,008 ±     0,042  MB/sec
+SpringBenchmark.prototypeProviderSpring:·gc.churn.PS_Survivor_Space.norm  thrpt    5       0,022 ±     0,118    B/op
+SpringBenchmark.prototypeProviderSpring:·gc.count                         thrpt    5      50,000              counts
+SpringBenchmark.prototypeProviderSpring:·gc.time                          thrpt    5      46,000                  ms
+SpringBenchmark.prototypeProviderSpring:·stack                            thrpt              NaN                 ---
+SpringBenchmark.prototypeSpring                                           thrpt    5     529,250 ±   369,313  ops/ms
+SpringBenchmark.prototypeSpring:·gc.alloc.rate                            thrpt    5     668,030 ±   604,658  MB/sec
+SpringBenchmark.prototypeSpring:·gc.alloc.rate.norm                       thrpt    5    2168,022 ±     0,148    B/op
+SpringBenchmark.prototypeSpring:·gc.churn.PS_Eden_Space                   thrpt    5     620,600 ±   537,754  MB/sec
+SpringBenchmark.prototypeSpring:·gc.churn.PS_Eden_Space.norm              thrpt    5    2019,662 ±   366,707    B/op
+SpringBenchmark.prototypeSpring:·gc.churn.PS_Survivor_Space               thrpt    5       0,018 ±     0,056  MB/sec
+SpringBenchmark.prototypeSpring:·gc.churn.PS_Survivor_Space.norm          thrpt    5       0,060 ±     0,157    B/op
+SpringBenchmark.prototypeSpring:·gc.count                                 thrpt    5      44,000              counts
+SpringBenchmark.prototypeSpring:·gc.time                                  thrpt    5      43,000                  ms
+SpringBenchmark.prototypeSpring:·stack                                    thrpt              NaN                 ---
+SpringBenchmark.singletonFactory                                          thrpt    5  369390,491 ± 13600,816  ops/ms
+SpringBenchmark.singletonFactory:·gc.alloc.rate                           thrpt    5       0,005 ±     0,033  MB/sec
+SpringBenchmark.singletonFactory:·gc.alloc.rate.norm                      thrpt    5      ? 10??                B/op
+SpringBenchmark.singletonFactory:·gc.count                                thrpt    5         ? 0              counts
+SpringBenchmark.singletonFactory:·stack                                   thrpt              NaN                 ---
+SpringBenchmark.singletonProviderSpring                                   thrpt    5    4985,045 ±   993,350  ops/ms
+SpringBenchmark.singletonProviderSpring:·gc.alloc.rate                    thrpt    5       0,006 ±     0,034  MB/sec
+SpringBenchmark.singletonProviderSpring:·gc.alloc.rate.norm               thrpt    5       0,003 ±     0,017    B/op
+SpringBenchmark.singletonProviderSpring:·gc.count                         thrpt    5         ? 0              counts
+SpringBenchmark.singletonProviderSpring:·stack                            thrpt              NaN                 ---
+SpringBenchmark.singletonSpring                                           thrpt    5    6108,728 ±   659,743  ops/ms
+SpringBenchmark.singletonSpring:·gc.alloc.rate                            thrpt    5       0,006 ±     0,034  MB/sec
+SpringBenchmark.singletonSpring:·gc.alloc.rate.norm                       thrpt    5       0,002 ±     0,015    B/op
+SpringBenchmark.singletonSpring:·gc.count                                 thrpt    5         ? 0              counts
+SpringBenchmark.singletonSpring:·stack                                    thrpt              NaN                 ---

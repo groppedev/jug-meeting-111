@@ -13,6 +13,14 @@
 		</property>
 	</bean>
 
+	<bean id="jug.emailer.proto.provider" class="org.springframework.beans.factory.config.ProviderCreatingFactoryBean" scope="singleton">
+		<property name="targetBeanName" value="jug.emailer.proto" />
+	</bean>
+	
+	<bean id="jug.emailer.singleton.provider" class="org.springframework.beans.factory.config.ProviderCreatingFactoryBean" scope="singleton">
+		<property name="targetBeanName" value="jug.emailer.singleton" />
+	</bean>
+
     <bean id="jug.spellChecker" class="groppedev.jug.meeting111.ItalianSpellChecker" scope="singleton" />
     <bean id="jug.transport" class="groppedev.jug.meeting111.SMTPTransport" scope="singleton" />
 
