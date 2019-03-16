@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" 
+	default-lazy-init="true">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<description>Configurations</description>
+		<property name="locations">
+			<list>
+				<value>classpath:conf.properties</value>
+			</list>
+		</property>
+	</bean>
+
+    <bean id="jug.spellChecker" class="groppedev.jug.meeting111.ItalianSpellChecker" scope="singleton" />
+    <bean id="jug.transport" class="groppedev.jug.meeting111.SMTPTransport" scope="singleton" />
+
+	<bean id="jug.emailer.singleton" class="groppedev.jug.meeting111.Emailer" scope="singleton">
+		<constructor-arg index="0" ref="jug.spellChecker" />
+		<constructor-arg index="1" ref="jug.transport" />
+	</bean>
+    
+    <bean id="jug.emailer.proto" class="groppedev.jug.meeting111.Emailer" scope="prototype">
+		<constructor-arg index="0" ref="jug.spellChecker" />
+		<constructor-arg index="1" ref="jug.transport" />
+	</bean>
+	
+	<beans profile="PRODUCTION">
+	</beans>
+</beans>
