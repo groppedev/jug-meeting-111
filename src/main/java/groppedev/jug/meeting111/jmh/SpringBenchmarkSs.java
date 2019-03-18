@@ -2,8 +2,6 @@ package groppedev.jug.meeting111.jmh;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.inject.Provider;
-
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.CompilerControl;
@@ -15,7 +13,6 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.TearDown;
 import org.openjdk.jmh.annotations.Warmup;
-import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -35,21 +32,15 @@ import groppedev.jug.meeting111.SMTPTransport;
  * 
  * @see http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/
  * @see https://mechanical-sympathy.blogspot.com/2011/11/biased-locking-osr-and-benchmarking-fun.html?m=1
- * 
- * -Dspring.profiles.active="profile1,profile2"
- * 
- * 1.4.6. Method Injection ?? 
- * https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-method-injection
- * 
  * @author Groppelli Massimo
  */
-@SuppressWarnings({"static-method", "unchecked"})
+@SuppressWarnings({"static-method"})
 @BenchmarkMode(Mode.SingleShotTime)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@OutputTimeUnit(TimeUnit.MICROSECONDS)
+@Warmup(iterations = 10, time = 1, timeUnit = TimeUnit.SECONDS)
 @CompilerControl(CompilerControl.Mode.EXCLUDE)
 @State(Scope.Benchmark)
-public class SpringBenchmark 
+public class SpringBenchmarkSs 
 {
 	private AbstractApplicationContext applicationContext;
 
@@ -71,39 +62,29 @@ public class SpringBenchmark
 	}
 	
 	@Benchmark
-	public void singletonFactory(Blackhole bh)
+	public boolean singletonFactory()
 	{
-		bh.consume(Emailers.emailer());
+		return Emailers.emailer().send("text");
 	}
 	@Benchmark
-	public void singletonSpring(Blackhole bh)
+	public boolean singletonSpring()
 	{
-		bh.consume(applicationContext.getBean("jug.emailer.singleton"));
+		return ((Emailer)applicationContext.getBean("jug.emailer.singleton")).send("text");
 	}
 	@Benchmark
-	public void singletonProviderSpring(Blackhole bh)
+	public boolean prototypeFactory()
 	{
-		bh.consume(((Provider<Emailer>) applicationContext.getBean("jug.emailer.singleton.provider")).get());
+		return Emailers.newEmailer(new ItalianSpellChecker(), new SMTPTransport()).send("text");
 	}
 	@Benchmark
-	public void prototypeFactory(Blackhole bh)
+	public boolean prototypeSpring()
 	{
-		bh.consume(Emailers.newEmailer(new ItalianSpellChecker(), new SMTPTransport()));
-	}
-	@Benchmark
-	public void prototypeSpring(Blackhole bh)
-	{
-		bh.consume(applicationContext.getBean("jug.emailer.proto"));
-	}
-    @Benchmark
-	public void prototypeProviderSpring(Blackhole bh)
-	{
-		bh.consume(((Provider<Emailer>) applicationContext.getBean("jug.emailer.proto.provider")).get());
+		return ((Emailer)applicationContext.getBean("jug.emailer.proto")).send("text");
 	}
 	public static void main(String...args) throws RunnerException
 	{
 		Options opt = new OptionsBuilder()
-				.include(SpringBenchmark.class.getSimpleName())
+				.include(SpringBenchmarkSs.class.getSimpleName())
 				.forks(1)
 				.jvmArgsAppend("-XX:-UseBiasedLocking")
 				.build();

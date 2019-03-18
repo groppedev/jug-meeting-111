@@ -1,0 +1,16 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_101, Java HotSpot(TM) 64-Bit Server VM, 25.101-b13
+# VM invoker: C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.exe
+# VM options: -Dfile.encoding=Cp1252 -XX:-UseBiasedLocking
+# Warmup: 10 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: groppedev.jug.meeting111.jmh.SpringBenchmarkAvg.singletonSpring
+
+Benchmark                            Mode  Cnt  Score   Error  Units
+SpringBenchmarkAvg.prototypeFactory  avgt    5  0,195 ± 0,019  us/op
+SpringBenchmarkAvg.prototypeSpring   avgt    5  5,440 ± 0,160  us/op
+SpringBenchmarkAvg.singletonFactory  avgt    5  0,105 ± 0,001  us/op
+SpringBenchmarkAvg.singletonSpring   avgt    5  0,225 ± 0,009  us/op
