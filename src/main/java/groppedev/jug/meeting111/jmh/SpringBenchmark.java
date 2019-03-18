@@ -36,6 +36,11 @@ import groppedev.jug.meeting111.SMTPTransport;
  * @see http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/
  * @see https://mechanical-sympathy.blogspot.com/2011/11/biased-locking-osr-and-benchmarking-fun.html?m=1
  * 
+ * -Dspring.profiles.active="profile1,profile2"
+ * 
+ * 1.4.6. Method Injection ?? 
+ * https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-method-injection
+ * 
  * @author Groppelli Massimo
  */
 @SuppressWarnings({"static-method", "unchecked"})

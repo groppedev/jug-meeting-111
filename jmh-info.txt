@@ -1,0 +1,3 @@
+EXAMPLE: 
+cd C:\Users\massi\git\jug-meeting-111
+C:\Tools\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin\mvn clean install 
